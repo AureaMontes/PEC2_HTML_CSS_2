@@ -1,0 +1,269 @@
+body {
+  margin: 0;
+  padding: 30px;
+  font-family: $font-family-sans-serif;
+  background-color: lighten($uoc-masterbrand, 25%);
+  color: $uoc-corporate;
+}
+
+h1 {
+  color: $color-letra;
+  font-size: 2.5em;
+}
+
+h2 {
+  color: $color-letra;
+}
+
+h5 {
+  font-weight: normal;
+}
+
+p {
+  font-size: 0.7em;
+  text-align: justify;
+}
+
+a {
+  color: $color-letra;
+  text-decoration: none;
+}
+
+header {
+  display: inline-flex;
+  width: 100%;
+  justify-content: space-between;
+
+  & .header__logo {
+    max-width: 100px;
+    height: auto;
+    clip-path: circle(30%);
+  }
+  
+  & .header__opciones {
+    text-align: right;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+ 
+  & li {
+    list-style: none;
+    margin-left: 50px;
+  }
+
+  @media (min-width: 600px) {
+    & ul {
+      display: inline-flex;
+    }
+  }
+}
+
+.main {
+  color: gainsboro;
+  margin: 0 auto;
+  max-width: 1000px;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows:
+    250px
+    250px
+    1fr;
+  grid-template-areas:
+    "main_item1 main_item1 main_item1"
+    "main_item2 main_item2 main_item2"
+    "main_item3 main_item3 main_item3"
+    "main_item4 main_item4 main_item4";
+}
+
+.main_item1 {
+  grid-area: main_item1;
+}
+
+.main_item2 {
+  grid-area: main_item2;
+  background-color: #5e79ac;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.main_item3 {
+  grid-area: main_item3;
+  background-color: indigo;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.main_item4 {
+  grid-area: main_item4;
+  background-color: darkmagenta;
+}
+
+@media (min-width: 600px) and (max-width: 1000px) {
+  .main {
+    grid-template-columns: 200px 1fr 300px;
+    grid-template-rows:
+      350px
+      160px;
+    grid-template-areas:
+      "main_item1 main_item1 main_item1"
+      "main_item2 main_item2 main_item2"
+      "main_item3 main_item3 main_item4";
+  }
+}
+
+@media (min-width: 1001px) {
+  .main {
+    grid-template-columns: 200px 1fr 300px;
+    grid-template-rows:
+      450px
+      1fr;
+    grid-template-areas:
+      "main_item1 main_item1 main_item1"
+      "main_item2 main_item3 main_item4";
+  }
+}
+
+.main_item1__grupo {
+  width: 100%;
+  height: 100%;
+}
+
+.main_item1__nombre {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media (min-width: 600px) {
+  .main_item1__nombre {
+    top: 28%;
+    left: 50%;
+  }
+}
+
+.main_item3__miembros {
+  display: inline;
+}
+
+.main_item3__miembro {
+  clip-path: circle(30%);
+}
+
+.main_item4__concierto {
+  width: 100%;
+  height: 100%;
+}
+
+.footer {
+  margin-top: 30px;
+}
+
+.footer_contacto {
+  text-align: center;
+  margin-bottom: 30px;
+
+  & a {
+    color: $uoc-corporate;
+  }
+}
+
+.footer_links {
+  display: inline-flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.footer_links__logo {
+  max-width: 100px;
+  height: auto;
+  clip-path: circle(30%);
+}
+
+.footer_opciones {
+  & li {
+    list-style: none;
+  }
+
+  & ul {
+    padding: 0;
+  }
+
+  & a {
+    color: $uoc-corporate;
+    justify-content: space-between;
+  }
+}
+
+.footer_social {
+  padding-top: 15px;
+}
+
+@media (min-width: 600px) {
+  .footer_opciones {
+    & ul {
+      display: inline-flex;
+    }
+  }
+}
+
+.footer_uoc {
+  background-color: $uoc-corporate;
+  padding: 10px;
+
+  & p {
+    color: #fff;
+    margin-right: 15px;
+    text-align: justify;
+  }
+}
+
+.footer_uoc__logo {
+  height: 100%;
+}
+
+@media (min-width: 600px) {
+  .footer_uoc {
+    display: inline-flex;
+    padding: 15px;
+    
+    & img {
+      padding-right: 15px;
+      padding-top: 15px;
+    }
+  }
+}
+
+/* Page two -BAND MEMBERS */
+
+.main2_titulo {
+  color: $uoc-corporate;
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.main2_miembros {
+  & div {
+    text-align: center;
+  }
+  
+  & p {
+    text-align: center;
+  }
+}
+
+@media (min-width: 600px) {
+  .main2_miembros {
+    display: flex;
+    flex-wrap: wrap;
+
+    & div {
+      padding: 20px;
+      width: 30%;
+      text-align: center;
+    }
+  }
+}
