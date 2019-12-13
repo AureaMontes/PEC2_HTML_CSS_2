@@ -22,7 +22,7 @@
      "block-opening-brace-space-after": "always-single-line",
      "block-opening-brace-space-before": "always",
      "declaration-block-no-duplicate-properties": true,
-     "declaration-block-no-redundant-longhand-properties": true,
+ 
      "declaration-block-semicolon-newline-after": "always",
      "declaration-block-semicolon-space-after": "always-single-line",
      "declaration-block-semicolon-space-before": "never",

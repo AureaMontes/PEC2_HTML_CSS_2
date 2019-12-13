@@ -5,9 +5,9 @@
   "description": "Boilerplate for Advanced HTML/CSS Tools UOC students",
   "scripts": {
     "parcel:dev": "parcel src/portada.html -p 8123 --open",
-    "parcel:build": "parcel build src/index.html --public-url ./ --out-dir dist --no-source-maps --no-cache",
+    "parcel:build": "parcel build src/portada.html --public-url ./ --out-dir dist --no-source-maps --no-cache",
     "clean": "rimraf dist .cache .cache-loader",
-    "dev": "npm-run-all clean parcel:dev",
+    "dev": "npm-run-all clean parcel:dev", 
     "build": "npm-run-all clean stylelint parcel:build",
     "test": "echo 'Everything is working as expected ✅\nStart working on your project by running \\033[1mnpm run dev\\033[0m'",
     "stylelint": "stylelint src/**/*.scss"
@@ -15,7 +15,7 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/uoc-advanced-html-css/uoc-boilerplate.git"
-  },
+  }, 
   "author": {
     "name": "Jordi Tarrida",
     "email": "jorditarrida@uoc.edu"
